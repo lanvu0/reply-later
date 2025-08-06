@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Reply Later",
+    "version": "1.0.0",
+    "description": "A basic example extension with only required keys",
+    "permissions": [
+        "storage",
+        "notifications",
+        "alarms"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://x.com/*"],
+            "css": ["injected_styles.css"],
+            "js": ["content_script.js"]
+        }
+    ],
+    "background": {
+        "service-worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
